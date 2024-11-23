@@ -1,0 +1,255 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+header {
+  position: fixed;
+  width: 100%;
+}
+.logo {
+  width: 75px;
+  height: 75px;
+}
+.nav-bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: rgba(122, 122, 122, 0.913);
+}
+.nav-links {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+}
+li {
+  list-style: none;
+}
+.hamburger {
+  display: none;
+  position: relative;
+  cursor: pointer;
+  width: 30px;
+  height: 24px;
+}
+.hamburger .line {
+  display: block;
+  width: 100%;
+  height: 3px;
+  background: var(--text-color);
+  border-radius: 3px;
+  position: absolute;
+  border-radius: 3px;
+}
+.hamburger .top {
+  top: 0;
+}
+.hamburger .middle {
+  top: 50%;
+  transform: translateY(-50%);
+}
+.hamburger .bottom {
+  bottom: 0;
+}
+#toggle-menu {
+  display: none;
+}
+#toggle-menu:checked + .hamburger .top {
+  transform: rotate(45deg);
+  top: 50%;
+  z-index: 2;
+}
+#toggle-menu:checked + .hamburger .middle {
+  opacity: 0;
+  z-index: 2;
+}
+#toggle-menu:checked + .hamburger .bottom {
+  transform: rotate(-45deg);
+  top: 50%;
+  z-index: 2;
+}
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+  .nav-links {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: rgba(255, 255, 255, 0.463);
+    height: 100vh;
+    flex-direction: column;
+    width: 20%;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+  }
+  #toggle-menu:checked ~ .nav-links {
+    display: flex;
+    transform: translateX(0);
+  }
+  .nav-links li {
+    margin: 1.5rem 0;
+  }
+}
+#get-started {
+  width: 100vw;
+  height: 100vh;
+  background: url(/shelby-monnette-tfF3T9hQot8-unsplash.jpg) no-repeat
+    center/cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+#get-started h1 {
+  padding: 10px;
+  font-size: 40px;
+}
+.lay {
+  font-weight: normal;
+}
+.get-started-btn {
+  width: 100px;
+  align-self: center;
+  padding: 5px;
+  color: white;
+  background-color: rgb(40, 38, 38);
+  outline: 0;
+}
+.about {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin: 80px;
+}
+.about-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 250px;
+  overflow: hidden;
+  border-radius: 10px;
+  align-items: center;
+  text-align: center;
+}
+.featured-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: rgb(224, 232, 238);
+  gap: 30px;
+  padding: 100px;
+}
+video {
+  width: 100%;
+  height: 40%;
+}
+.featured-content h1 {
+  border-bottom: 3px rgb(247, 248, 250) solid;
+  font-size: 30px;
+}
+
+.sec-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 80px;
+  gap: 40px;
+}
+.sec-content-card1,
+.sec-content-card2 {
+  width: 427px;
+  height: 223px;
+}
+.sec-content-card1 {
+  background: url(./small-mountain-surrounded-by-hillside_37129-10.avif)
+    no-repeat center/cover;
+}
+.sec-content-card2 {
+  background: url(./pngtree-beautiful-mountain-landscape-with-a-small-river-and-high-mountains-in-image_15698322.jpg)
+    no-repeat center/cover;
+}
+.sec-content-card-content1,
+.sec-content-card-content2 {
+  width: 50%;
+  background-color: rgba(255, 255, 255, 0.676);
+  height: 100%;
+  text-align: center;
+}
+.sec-content h2 {
+  border-bottom: 3px rgb(133, 198, 252) solid;
+}
+.sec-content h2,
+.sec-content p {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.blue-border-btn1 {
+  border: rgb(99, 173, 242) 2px solid;
+  outline: none;
+  padding: 3px;
+  color: rgb(99, 173, 242);
+  width: 86px;
+  height: 22px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.blue-border-btn2 {
+  border: rgb(99, 173, 242) 2px solid;
+  outline: none;
+  padding: 3px;
+  color: rgb(99, 173, 242);
+  width: 98px;
+  height: 36px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+#heard-enough {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 80px;
+  text-align: center;
+}
+#heard-enough h3 {
+  font-size: 50px;
+  margin: 20px;
+  padding-bottom: 20px;
+  border-bottom: 3px rgb(133, 198, 252) solid;
+}
+#heard-enough p {
+  margin-bottom: 40px;
+}
+.footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 50px;
+  padding: 50px;
+  background-color: rgb(216, 214, 214);
+}
+.footer div {
+  display: flex;
+  flex-direction: column;
+}
+.footer a {
+  margin: 5px;
+}
+.footer h4 {
+  margin: 5px;
+}
