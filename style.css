@@ -3,6 +3,9 @@
   padding: 0;
   box-sizing: border-box;
 }
+html {
+  scroll-behavior: smooth;
+}
 a {
   text-decoration: none;
   color: black;
@@ -153,7 +156,8 @@ video {
 .sec-content-card1,
 .sec-content-card2 {
   width: 427px;
-  height: 245px;
+  height: 255px;
+  box-shadow: 3px 2px 8px;
 }
 .sec-content-card1 {
   background: url(./small-mountain-surrounded-by-hillside_37129-10.avif)
