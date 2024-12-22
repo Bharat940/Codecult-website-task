@@ -1,0 +1,1 @@
+It is a fully responsive and working website which I created using HTML and CSS with the help of already made template.
